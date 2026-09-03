@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    scrollbar-gutter: stable;
+  }
+  body {
+    @apply bg-paper text-ink;
+  }
+  ::selection {
+    @apply bg-accentSoft;
+  }
+  button {
+    @apply transition-colors duration-150;
+  }
+}
+
+@layer utilities {
+  .focus-ring {
+    @apply outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-paper;
+  }
+}
